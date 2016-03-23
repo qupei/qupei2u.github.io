@@ -4,65 +4,64 @@
 	<meta charset="UTF-8">
 	<title>HTML、CSS布局入门，三栏式布局的实践</title>
 	<style type="text/css">
-		body,h1{ margin: 0; padding: 0; }
-		/*
-		
-		.way_1 .left {
-			width: 20%;
-			height: 500px;
-			background-color: #99CCCC;
+		body{ margin: 0; padding: 0; }
+		.clearfix {
+		  clear: both;
+		}
+		#wrap{
+			padding: 20px;
+			background-color: #eee;
+			border: 1px solid #999;
+			font-size: 16px;
+		}
+		.left {
 			float: left;
+			width: 200px;
+			background-color: #fff;
 		}
-		.way_1 .middle {
-			width: 60%;
-			height: 500px;
-			background-color: #FFCC99;
+		.left img {
 			float: left;
-		}
-		.way_1 .right {
-			width: 20%;
-			height: 500px;
-			background-color: #FFCCCC;
-			float:right;
-		}*/
-		
-		.way_2 .left {
-			width: 200px;
-			height: 600px;
-			background-color: #0099CC;
-			position: absolute;
-			left: 0px;
-			top: 0px;
-		}
-		.way_2 .middle {
-			height: 600px;
-			background-color: #CCCCCC;
-			margin: 0 210px;
-			
-		}
-		.way_2 .right {
-			width: 200px;
-			height: 600px;
-			background-color: #FF6666;
-			position: absolute;
-			right: 0px;
-			top: 0px;
+			margin: 20px;
+			background: #ccc;
 		}
 
+		.main {
+			background-color: #fff;
+			margin: 0 140px 0 220px;
+			padding: 20px;
+		}
+
+		.right {
+			background-color: #fff;
+			width: 80px;
+			padding: 0 20px 20px 20px;
+			float: right;
+		}
+		.right img {
+			margin-top: 20px;
+			background: #ccc;
+			width: 80px;
+			height: 80px;
+		}
 	</style>
 </head>
 <body>
-	<!-- 
-	<div class="way_1">
-		<div class="left">1</div>
-		<div class="middle">2</div>
-		<div class="right">3</div>
-	</div> 
-	-->
-	<div class="way_2">
-		<div class="left"></div>
-		<div class="middle">这里是一个左右固定，中间自适应三列布局</div>
-		<div class="right"></div>
+	<div id="wrap">
+		<div class="left">
+			<img src="http://pic.qiantucdn.com/58pic/18/19/15/90V58PIC4Sy.jpg!/both/384x240" width="80px" height="80px;">
+			<p>全栈之路</p>
+		</div>
+		<div class="right">
+			<img src="">
+			<img src="">
+			<img src="">
+			<img src="">
+			<img src="">
+		</div>
+		<div class="main">
+			<h2>队名:全栈之路</h2>
+		这里是一个左右固定，中间自适应三列布局这里是一个左右固定，中间自适应三列布局这里是一个左右固定，中间自适应三列布局这里是一个左右固定，中间自适应三列布局这里是一个左右固定，中间自适应三列布局这里是一个左右固定，中间自适应三列布局这里是一个左右固定，中间自适应三列布局这里是一个左右固定，中间自适应三列布局这里是一个左右固定，中间自适应三列布局这里是一个左右固定，中间自适应三列布局这里是一个左右固定，中间自适应三列布局</div>
+		<div class="clearfix"></div>
 	</div>
 </body>
 </html>
