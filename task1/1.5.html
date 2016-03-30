@@ -45,14 +45,13 @@
 		.main {
 			float: left;
 			/*padding: 20px;*/
-			margin: 0px 400px 20px 20px;
+			margin: 0px 400px 85px 20px;
 			background-color: rgb(222,222,222);
 			font:15px/1.6 "微软雅黑";
 		}
 		.right {
 			position: absolute;
 			padding: 20px;
-			height: 600px;
 			width: 320px;
 			right: 20px;
 			background-color: #fff;
@@ -89,6 +88,26 @@
 		thead tr td{
 			background-color: #000;
 			color:  white;
+		}
+
+		.right table tr {
+			font:13px/1.6 "微软雅黑";
+			line-height: 30px;
+		}
+		.form－label {
+			text-align: right;
+		}
+		.form-control {
+			padding-left: 10px;
+		}
+		.btn {
+			width: 90%;
+			height: 35px;
+			border-radius: 10px;
+		}
+		.btn-info {
+			background-color: rgb(51,85,208);
+			color: white;
 		}
 	</style>
 </head>
@@ -196,11 +215,66 @@
 			</div>
 		</div>
 		<div class="right clearfix">
-			这里是一个侧栏
+			<h2>这里是一个侧栏</h2>
+			<table>
+				<tr>
+					<td class="form－label">请输入邮箱地址</td>
+					<td class="form-control"><input type="text" placeholder="这是一个文本输入框" /></td>
+				</tr>
+				<tr>
+					<td class="form－label"></td>
+					<td class="form-control"><small>邮箱地址请按要求各市输入</small></td>
+				</tr>
+				<tr>
+					<td class="form－label">请输入密码</td>
+					<td class="form-control"><input type="password" value="   "/></td>
+				</tr>
+				<tr>
+					<td class="form－label">请重复输入密码</td>
+					<td class="form-control"><input type="password" value="   " /></td>
+				</tr>
+				<tr>
+					<td class="form－label"></td>
+					<td class="form-control"><small>密码请为6-16位英文数字</small></td>
+				</tr>
+				<tr>
+					<td class="form－label">性别</td>
+					<td class="form-control">
+						<input type="radio" name="sex" /><label>男</label>&nbsp;
+						<input type="radio" name="sex" /><label>女</label>
+					</td>
+				</tr>
+				<tr>
+					<td class="form－label">城市</td>
+					<td class="form-control">
+						<select>
+							<option value="010">北京</option>
+							<option value="021">上海</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td class="form－label">爱好</td>
+					<td class="form-control">
+						<input type="checkbox" />运动
+						<input type="checkbox" />艺术
+						<input type="checkbox" />科学
+					</td>
+				</tr>
+				<tr>
+					<td class="form－label">个人描述</td>
+					<td class="form-control" rowspan="3">
+						<textarea rows="5" >这是一个多行输入框,这是一个多行输入框</textarea>
+					</td>
+				</tr>
+				<tr>
+					<td rowspan="4"></td>
+				</tr>
+				
+			</table>
+			<button class="btn btn-info"><b>确认提交</b></button>
 		</div>
-		<!-- <div class="clearfix"></div> -->
 	</div>
-	<!-- <div class="clearfix"></div>	 -->
 	<footer></footer>
 </body>
 </html>
