@@ -5,7 +5,10 @@
 	<title>任务五：零基础HTML及CSS编码（二）</title>
 	<style type="text/css">
 		* {margin: 0; padding: 0;}
-		.clearfix {clear: both;}
+		/* .clearfix {clear: both;} */
+		.clearfix {
+		  overflow: auto;
+		}
 		header {
 			width: 100%;
 			height: 55px;
@@ -37,6 +40,7 @@
 			background-color: rgb(0,0,0);
 			/*padding: 20px;*/
 			bottom: 0px;
+			position:fixed;
 		}
 		.main {
 			float: left;
@@ -76,7 +80,15 @@
 		}
 
 		.content table {
-			
+			border: 1px;
+			width: 100%;
+		}
+		td {
+			padding-left: 5px;
+		}
+		thead tr td{
+			background-color: #000;
+			color:  white;
 		}
 	</style>
 </head>
@@ -90,14 +102,15 @@
 			<li>导航链接四</li>
 		</ul>
 	</header>
-	<div class="wrap">
+	<div class="wrap clearfix">
 		<div class="main">
 			<div class="content">
 				<h1>文章一级标题</h1>
 				<h2>文章一级标题</h2>
 				<h3>张三 2016-03-29</h3>
-				<p>张蕾在演讲中描绘了网易考拉海购作为媒体驱动型电商，实现从销售商品到推广生活方式的路径，“第一步，让消费者知道买什么；第二步，让消费者买到对的商品；第三步，让消费者感受到。网易考拉海购打造了基于此路径的三大战略，也将在 2016年 落地。</p>
+				<p>张蕾在演讲中描绘了网易考拉海购作为媒体驱动型电商，实现从销售商品到推广生活方式的路径，“第一步，让消费者知道买什么；第二步，让消费者买到对的商品；第三步，让消费者感受到。网易考拉海购打造了基于此路径的三大战略，也将在 2016年 落地。张蕾在演讲中描绘了网易考拉海购作为媒体驱动型电商，实现从销售商品到推广生活方式的路径，“第一步，让消费者知道买什么；第二步，让消费者买到对的商品；第三步，让消费者感受到。网易考拉海购打造了基于此路径的三大战略，也将在 2016年 落地。张蕾在演讲中描绘了网易考拉海购作为媒体驱动型电商，实现从销售商品到推广生活方式的路径，“第一步，让消费者知道买什么；第二步，让消费者买到对的商品；第三步，让消费者感受到。网易考拉海购打造了基于此路径的三大战略，也将在 2016年 落地。</p>
 				<img src="https://g-search1.alicdn.com/img/bao/uploaded/i4/imgextra/i4/100100183902521561/TB23FlPmXXXXXbxXpXXXXXXXXXX_!!0-saturn_solar.jpg_460x460Q90.jpg_.webp" width="200px;">
+				<p>张蕾在演讲中描绘了网易考拉海购作为媒体驱动型电商，实现从销售商品到推广生活方式的路径，“第一步，让消费者知道买什么；第二步，让消费者买到对的商品；第三步，让消费者感受到。网易考拉海购打造了基于此路径的三大战略，也将在 2016年 落地。张蕾在演讲中描绘了网易考拉海购作为媒体驱动型电商，实现从销售商品到推广生活方式的路径，“第一步，让消费者知道买什么；第二步，让消费者买到对的商品；第三步，让消费者感受到。网易考拉海购打造了基于此路径的三大战略，也将在 2016年 落地。张蕾在演讲中描绘了网易考拉海购作为媒体驱动型电商，实现从销售商品到推广生活方式的路径，“第一步，让消费者知道买什么；第二步，让消费者买到对的商品；第三步，让消费者感受到。网易考拉海购打造了基于此路径的三大战略，也将在 2016年 落地。</p>
 				<ul>
 					<ol>列表项目</ol>
 					<ol>列表项目</ol>
@@ -108,7 +121,7 @@
 			<div class="content">
 				<p>让消费者知道买什么，买得到，并且可以分享出去。这就是考拉海购的榜单效应。2016年 网易考拉将会与最具权威和影响力的商品榜单机构合作，让中国消费者与全球最新的生活方式同步，同时优化自己的选品和采购策略。</p>
 			</div>
-			<div class="content">
+			<div class="content clearfix">
 				<h1>图片</h1>
 				<div class="pic-text">
 					<span>好看的文字</span>
@@ -150,14 +163,16 @@
 					<span>好看的文字</span>
 					<img src="https://pic3.zhimg.com/e97279cca54061b9829c59df1e36ca9e_r.jpg">
 				</div>
-				<div class="clearfix"></div>
+				<!-- <div class="clearfix"></div> -->
 			</div>
-			<div class="content">
-				<table>
+			<div class="content clearfix">
+				<table border="1px">
 					<thead>
-						<th>表头</th>
-						<th>表头</th>
-						<th>表头</th>
+						<tr>
+							<td>表头</td>
+							<td>表头</td>
+							<td>表头</td>
+						</tr>
 					</thead>
 					<tbody>
 						<tr>
@@ -169,7 +184,8 @@
 							<td>内容单元格</td>
 							<td>内容单元格</td>
 							<td>内容单元格</td>
-						</tr><tr>
+						</tr>
+						<tr>
 							<td>内容单元格</td>
 							<td>内容单元格</td>
 							<td>内容单元格</td>
@@ -179,12 +195,12 @@
 				</table>
 			</div>
 		</div>
-		<div class="right">
+		<div class="right clearfix">
 			这里是一个侧栏
 		</div>
-		<div class="clearfix"></div>
+		<!-- <div class="clearfix"></div> -->
 	</div>
-	<div class="clearfix"></div>	
+	<!-- <div class="clearfix"></div>	 -->
 	<footer></footer>
 </body>
 </html>
