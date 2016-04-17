@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		.red-block {
+			width: 80px;
+			height: 80px;
+			float: left;
+			margin: 20px;
+			background-color: #669966;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<div class="warp">
+		<div class="options">
+			<input id="number" value=""></input>
+			<button id="inster_left">左侧入</button>
+			<button id="inster_right">右侧入</button>
+			<button id="remove_left">左侧出</button>
+			<button id="remove_right">右侧出</button>
+		</div>
+		<div id="show"></div>
+	</div>
+</body>
+<script type="text/javascript">
+	var $ = function(selector) {
+	  if (selector.startsWith('#'))
+	    return document.getElementById(selector.substr(1))
+	}
+
+	var data = [1,2,3]
+
+	function initData(){
+		$('#show').innerHTML = '';
+		for(var i = 0; i<data.length; i++) {
+			createBlock(data[i]);
+		}
+	}
+	initData();
+
+	function createBlock(num) {
+		var oDiv = document.createElement('div');
+	    oDiv.innerHTML = num;
+	    oDiv.setAttribute("class","red-block"); 
+	    $('#show').appendChild(oDiv);
+	}
+
+	$('#inster_left').onclick = function(){
+		//alert($('#number').value))
+		if($('#number').value=='') return;
+		data.unshift	(Number($('#number').value));
+		initData();
+	}
+	$('#inster_right').onclick = function(){
+		//alert($('#number').value))
+		if($('#number').value=='') return;
+		data.push(Number($('#number').value));
+		initData();
+	}
+
+	$('#remove_left').onclick = function(){
+		data.shift();
+		initData();
+	}
+	$('#remove_right').onclick = function(){
+		data.pop();
+		initData();
+	}
+
+</script>
+</html>
